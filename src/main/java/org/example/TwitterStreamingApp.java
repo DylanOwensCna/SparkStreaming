@@ -12,11 +12,13 @@ import java.util.Arrays;
 public class TwitterStreamingApp {
 
     public static void main(String[] args) throws InterruptedException {
-        // Set up Twitter credentials
-        System.setProperty("twitter4j.oauth.consumerKey", "YOUR_CONSUMER_KEY");
-        System.setProperty("twitter4j.oauth.consumerSecret", "YOUR_CONSUMER_SECRET");
-        System.setProperty("twitter4j.oauth.accessToken", "YOUR_ACCESS_TOKEN");
-        System.setProperty("twitter4j.oauth.accessTokenSecret", "YOUR_ACCESS_SECRET");
+        // Set up Twitter credentials using environment variables
+        String consumerKey = System.getenv("TWITTER_CONSUMER_KEY");
+        String consumerSecret = System.getenv("TWITTER_CONSUMER_SECRET");
+        String accessToken = System.getenv("TWITTER_ACCESS_TOKEN");
+        String accessTokenSecret = System.getenv("TWITTER_ACCESS_SECRET");
+        System.setProperty("twitter4j.config", "twitter4j.properties");
+
 
         // Create a Spark configuration
         SparkConf conf = new SparkConf().setAppName("TwitterStream");
