@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TwitterStreaming">
+    <output-path>$PROJECT_DIR$/out/artifacts/TwitterStreaming</output-path>
+    <root id="archive" name="TwitterStreaming.jar" />
+  </artifact>
+</component>
