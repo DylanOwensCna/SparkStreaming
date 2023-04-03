@@ -23,6 +23,7 @@ public class TwitterStreamingApp {
         String accessTokenSecret = System.getenv("TWITTER_ACCESS_SECRET");
         System.setProperty("twitter4j.config", "twitter4j.properties");
 
+
         // Create a Twitter configuration
         ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
         configurationBuilder.setOAuthConsumerKey(consumerKey)
